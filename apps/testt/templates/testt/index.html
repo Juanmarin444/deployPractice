@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login or Register</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Register</h1>
+      <div class="messages">
+        {% if messages %}
+        <ul class="messages">
+          {% for message in messages %}
+            <li>{{ message }}
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      <div class="form">
+        <form id="register" action="/register" method="post">
+          {% csrf_token %}
+          <p>
+            <label>First Name: </label>
+            <input type="text" name="first_name">
+          </p>
+          <p>
+            <label>Last Name: </label>
+            <input type="text" name="last_name">
+          </p>
+          <p>
+            <label>Email: </label>
+            <input type="text" name="email">
+          </p>
+          <p>
+            <label>Password: </label>
+            <input type="password" name="password">
+          </p>
+          <p>
+            <label>Confirm Password: </label>
+            <input type="password" name="conf_pass">
+          </p>
+          <p>
+            <input type="submit" value="Register">
+          </p>
+        </form>
+      </div> <!-- register form -->
+      <div class="form">
+        <h1>Login</h1>
+        <form id="login" action="/login" method="post">
+          {% csrf_token %}
+          <p>
+            <label>Email: </label>
+            <input type="text" name="email">
+          </p>
+          <p>
+            <label>Password: </label>
+            <input type="password" name="password">
+          </p>
+          <p>
+            <input type="submit" value="Login">
+          </p>
+        </form>
+      </div> <!-- login from -->
+    </div> <!-- contianer -->
+  </body>
+</html>

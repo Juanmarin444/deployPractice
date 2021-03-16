@@ -27,7 +27,7 @@ SECRET_KEY = 'he1l@axfq^+=o@q716o30sv(cqr0%5$e1c4o4ja*o%f(s8e3d-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 # DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [blooming-thicket-28054.herokuapp.com]
 
 
 # Application definition
